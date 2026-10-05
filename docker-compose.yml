@@ -1,0 +1,18 @@
+services:
+  # Container de treino: lê data/btc.csv e grava o artefato em model/
+  trainer:
+    build: ./training
+    volumes:
+      - ./data:/app/data:ro
+      - ./model:/app/model
+
+  # Container de inferência: carrega model/model.joblib e expõe a API na porta 8000
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./model:/app/model:ro
+    depends_on:
+      trainer:
+        condition: service_completed_successfully

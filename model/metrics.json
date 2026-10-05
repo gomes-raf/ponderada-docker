@@ -1,0 +1,24 @@
+{
+  "model": "LinearRegression",
+  "n_lags": 7,
+  "train_samples": 578,
+  "test_samples": 145,
+  "test_period": [
+    "2026-05-13",
+    "2026-10-04"
+  ],
+  "test_model": {
+    "mae": 1035.79,
+    "rmse": 1481.98,
+    "mape_pct": 1.477,
+    "direction_acc_pct": 48.3
+  },
+  "test_naive_baseline": {
+    "mae": 986.58,
+    "rmse": 1445.03,
+    "mape_pct": 1.397
+  },
+  "skill_vs_naive_mae_pct": -4.99,
+  "test_up_days_pct": 47.6,
+  "trained_at": "2026-10-05T18:02:55+00:00"
+}
