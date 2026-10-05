@@ -8,6 +8,8 @@ Para o esboço da arquitetura de forma mais simples e direta, optei por construi
 
 O container de treino grava model.joblib na pasta ./model, depois o container da API monta a mesma pasta como volume somente leitura e carrega o modelo quando inicia. Escolhi o volume em vez de copiar o modelo para a imagem (COPY) pra não precisar reconstruir a API todo treino.
 
+A escolha de dois containers ao invés de um notebook e um container dado como opção no readme, se da ao fato de ficar muito mais fácil de reproduzir (apenas um comando no terminal, ao invés de ter que rodar o notebook e depois o docker).
+
 ![Diagrama da arquitetura](docs/diagrama.jpg)
 
 ### Dados
