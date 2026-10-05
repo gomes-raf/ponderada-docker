@@ -2,7 +2,7 @@
 
 ## Rafael Gomes Ferreira
 
----
+
 ## Registro do desenvolvimento
 
 Com o diagrama UML feito partimos para o desenvolvimento. Por já ter estabelecido a estrutura, pra usar o Prophet conforme recomendado pelo professor era necessário alguns ajuste. Por falta de tempo decidi por prosseguir sem Prophet mesmo.
@@ -17,7 +17,9 @@ O container de treino grava model.joblib na pasta ./model, depois o container da
 
 ### Dados
 
-Para os dados foram pegos dados reais de BTC-USD baixados da API do Yahoo Finance, conforme indicado no readme.
+Para os dados foram pegos dados reais de BTC-USD baixados da API do Yahoo Finance, conforme indicado no readme. Os dados são diários, de 05/10/2024 a 04/10/2026 (730 dias), com colunas date, close e volume. O modelo usa os 7 fechamentos anteriores pra prever o fechamento do dia seguinte.
+
+Dos dados, 80% foram para treino e 20% foram para teste. A decisão mais importante aqui é manter tudo em ordem cronológica pra não ter vazamento do futuro e inviesar o modelo.
 
 ### Modelo
 
@@ -60,7 +62,7 @@ docker compose down
 
 # Logs de comprovação de funcionamento
 
-**Treino no container:** utiliza do comando para treinar o modelo
+**Treino no container:** utiliza do comando para mostrar o log de treino do modelo
 
 ![Log 1](docs/log-1.png)
 
