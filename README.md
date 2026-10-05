@@ -1,11 +1,6 @@
-# Devlog — Predição do preço do Bitcoin com Docker
-
-## Rafael Gomes Ferreira
-
+# Devlog Rafael Gomes Ferreira
 
 ## Registro do desenvolvimento
-
-Com o diagrama UML feito partimos para o desenvolvimento. Por já ter estabelecido a estrutura, pra usar o Prophet conforme recomendado pelo professor era necessário alguns ajuste. Por falta de tempo decidi por prosseguir sem Prophet mesmo.
 
 ### Arquitetura
 
@@ -23,7 +18,9 @@ Dos dados, 80% foram para treino e 20% foram para teste. A decisão mais importa
 
 ### Modelo
 
-Por questão de agilidade, em um primeiro momento decidi por utilizar regressão linear (scikit-learn) como modelo das predições
+Com o diagrama UML feito partimos para o desenvolvimento. Por já ter estabelecido a estrutura, pra usar o Prophet conforme recomendado pelo professor era necessário alguns ajuste. Por falta de tempo decidi por prosseguir sem Prophet mesmo.
+
+Por questão de agilidade, em um primeiro momento decidi por utilizar regressão linear (scikit-learn) como modelo das predições.
 
 ### Métricas
 
@@ -60,7 +57,7 @@ curl.exe -X POST http://localhost:8000/predict
 docker compose down
 ```
 
-# Logs de comprovação de funcionamento
+## Logs de comprovação de funcionamento
 
 **Treino no container:** utiliza do comando para mostrar o log de treino do modelo
 
